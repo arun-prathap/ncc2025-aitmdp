@@ -1,7 +1,7 @@
 # ncc2025-aitmdp
 Simulation Code for National Conference on Communications (NCC) 2025 paper ["On Resource Allocation for Remote Control of MDPs Over Queues Using Age-of-Loop"](https://doi.org/10.1109/NCC63735.2025.10982939)
 
-Update as on 26 May 2025 : Made repo public, code for generating plots in publication are uploaded, simulation code will be available here by May 31, 2025.
+Update as on 30 May 2025 : Made repo public, code for generating plots in publication are uploaded, simulation code will be available here by Jun 10, 2025.
 
 ### Code for Analytical and Simulation Results
 
@@ -13,7 +13,7 @@ Run generate_figures.py from the root directory of the repository. (The figures 
 
 The generated plots can be found in img/. 
 
-The code for fetching data from jsons/\*.json and convert to dictionary for plotting is available in gen_figures/\*.py from which plots are generated with plotfigure function in utils/plot_from_dicts.py. 
+The code for fetching data from jsons/\*.json and converting to dictionary for plotting is available in gen_figures/\*.py from which plots are generated with plotfigure function in utils/plot_from_dicts.py. 
 
 ```bash
 ├── generate_figures.py
