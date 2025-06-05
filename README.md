@@ -5,6 +5,18 @@ Update as on 30 May 2025 : Made repo public, code for generating plots in public
 
 ### Code for Analytical and Simulation Results
 
+The basic building blocks used in simulation are available in blocks/.
+
+```bash
+├── blocks/
+│   ├── queue.py (models a data structure configurable as FIFO/LIFO)
+│   ├── linkwithqueue.py (Models a link with queue having probabilistic admission and service)
+│   ├── mdplantmodel.py (MDP Plant Model)
+│   ├── mdpcontroller.py (AIT-MDP RemoteML controller as described in our paper)
+│   ├── mdpsystem_mod.py (Implementation for Constrained system as described in our paper)
+│   ├── mdpsystem.py (Implementation for Relaxed system as described in our paper)
+```
+
 The output is dumped in json files which are used to generate the plots.
 
 ### Generating plots in the publication
