@@ -7,7 +7,7 @@ Classes:
 #import random
 import numpy as np
 
-from link.queue import Queue
+from blocks.queue import Queue
 
 class LinkWithQueue:
     '''

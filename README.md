@@ -1,10 +1,11 @@
 # ncc2025-aitmdp
 Simulation Code for National Conference on Communications (NCC) 2025 paper ["On Resource Allocation for Remote Control of MDPs Over Queues Using Age-of-Loop"](https://doi.org/10.1109/NCC63735.2025.10982939)
 
-Update as on 30 May 2025 : Made repo public, code for generating plots in publication are uploaded, simulation code will be available here by Jun 10, 2025.
+Update as on 06 Jun 2025 : Made repo public, code for generating plots in publication are uploaded, simulation code partly available, pending for figures 7a and 8 in paper, will be available here by Jun 10, 2025.
 
 ### Code for Analytical and Simulation Results
 
+#### System Model and associated components
 The basic building blocks used in simulation are available in blocks/.
 
 ```bash
@@ -12,16 +13,35 @@ The basic building blocks used in simulation are available in blocks/.
 │   ├── queue.py (models a data structure configurable as FIFO/LIFO)
 │   ├── linkwithqueue.py (Models a link with queue having probabilistic admission and service)
 │   ├── mdplantmodel.py (MDP Plant Model)
-│   ├── mdpcontroller.py (AIT-MDP RemoteML controller as described in our paper)
-│   ├── mdpsystem_mod.py (Implementation for Constrained system as described in our paper)
-│   ├── mdpsystem.py (Implementation for Relaxed system as described in our paper)
+│   ├── mdpcontroller.py (AIT-MDP RemoteML controller as described in the paper)
+│   ├── mdpsystem_mod.py (Implementation of Constrained system as described in the paper)
+│   ├── mdpsystem.py (Implementation of Relaxed system as described in the paper)
 ```
 
-The output is dumped in json files which are used to generate the plots.
+#### Running the Code for Simulations/Analytical Results
+
+In generate_data.py file, uncomment the line corresponding to the data you want to generate  (import gen_data.fig_\* corresponding to your requirement). This tweak is done since the execution times may vary depending on the chosen episode lengths and number of steps in simulations and hence it is recommended to execute the simulations independently. (The parameter that can be adjusted to reduce/increase number of simulation steps/runs and the values used for results in the paper corresponding to files in gen_data/ is included in brackets in list below, if applicable)
+
+Execute the python file generate_data.py from the root directory of the repository. 
+
+The output is dumped as json files in sim/sim\*.json which can be used to generate the plots or compared with the author's results available in jsons/sim\*.json.
+
+```bash
+├── generate_data.py
+├── utils/util.py
+├── gen_data/
+│   ├── fig_3_6.py (max_steps=100000 in generate_data())
+│   ├── fig_4_sim_constrained.py (NO_OF_SIMULATIONS=1000 and NO_OF_STEPS=10000)
+│   ├── fig_4_analytical.py
+│   ├── fig_5a_5b_analytical.py (the code is more or less same as fig_4_analytical.py--can be clubbed)
+│   ├── fig_7b.py
+├── sim/
+│   ├── sim*.json (data corresponding to plots in the paper, after executing generate_data.py)
+```
 
 ### Generating plots in the publication
 
-Run generate_figures.py from the root directory of the repository. (The figures are not included as such in repo since the copyright has been transferred to IEEE for publication) 
+Execute the python file generate_figures.py from the root directory of the repository. (The figures are not included as such in repo since the copyright has been transferred to IEEE for publication) 
 
 The generated plots can be found in img/. 
 
@@ -31,7 +51,7 @@ The code for fetching data from jsons/\*.json and converting to dictionary for p
 ├── generate_figures.py
 ├── utils/plot_from_dicts.py
 ├── jsons/
-│   ├── sim*.json
+│   ├── sim*.json (data used for plots in the paper)
 ├── gen_figures/
 │   ├── fig*.py
 ├── img/

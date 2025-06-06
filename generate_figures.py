@@ -1,3 +1,8 @@
+import os
+
+if not os.path.isdir("img"):
+    os.mkdir("img")
+
 import gen_figures.fig_3
 import gen_figures.fig_4
 import gen_figures.fig_5a

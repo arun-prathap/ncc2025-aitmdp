@@ -9,7 +9,7 @@ import json
 from blocks.mdpplantmodel import MDPPlantModel
 from blocks.mdpcontroller import MDPController
 from blocks.linkwithqueue import LinkWithQueue
-from util.util import json_serialize
+from utils.util import json_serialize
 
         
 class MDPSystem:
