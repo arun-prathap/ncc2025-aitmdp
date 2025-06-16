@@ -17,6 +17,8 @@ The basic building blocks used in simulation are available in blocks/.
 │   ├── mdpsystem.py (Implementation of Relaxed system as described in the paper)
 ```
 
+Refer [System Model](SystemModel.pdf) for a simplified block diagram of the configuration being analysed.
+
 #### Running the Code for Simulations/Analytical Results
 
 In generate_data.py file, uncomment the line corresponding to the data you want to generate  (import gen_data.fig_\* corresponding to your requirement). This tweak is done since the execution times may vary depending on the chosen episode lengths and number of steps in simulations and hence it is recommended to execute the simulations independently. (The parameter that can be adjusted to reduce/increase number of simulation steps/runs and the values used for results in the paper corresponding to files in gen_data/ is included in brackets in list below, if applicable)
