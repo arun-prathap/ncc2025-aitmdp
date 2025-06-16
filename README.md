@@ -2,7 +2,7 @@
 Simulation Code for National Conference on Communications (NCC) 2025 paper ["On Resource Allocation for Remote Control of MDPs Over Queues Using Age-of-Loop"](https://doi.org/10.1109/NCC63735.2025.10982939)
 
 ### Code for Analytical and Simulation Results
-The components of the code made publicly available for reproducing results from the paper are explanined below.
+The components of the code made publicly available for reproducing results from the paper are explained below.
 
 #### System Model and associated components
 The basic building blocks used in simulation are available in blocks/.
@@ -42,6 +42,8 @@ The output is dumped as json files in sim/sim\*.json which can be used to genera
 ├── sim/
 │   ├── sim*.json (data corresponding to plots in the paper, after executing generate_data.py)
 ```
+
+The generation of random TPMs uses [Markov Decision Process (MDP) Toolbox for Python](https://pymdptoolbox.readthedocs.io/en/latest/). Other package requirements are commonly available in a normal conda distribution like os, json, numoy, pandas, random, etc.
 
 ### Generating plots in the publication
 
