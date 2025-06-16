@@ -43,7 +43,7 @@ The output is dumped as json files in sim/sim\*.json which can be used to genera
 │   ├── sim*.json (data corresponding to plots in the paper, after executing generate_data.py)
 ```
 
-The generation of random TPMs uses [Markov Decision Process (MDP) Toolbox for Python](https://pymdptoolbox.readthedocs.io/en/latest/). Other package requirements like os, json, numoy, pandas, random, etc. are commonly available in any conda-like distribution. 
+The generation of random TPMs uses [Markov Decision Process (MDP) Toolbox for Python](https://pymdptoolbox.readthedocs.io/en/latest/). Other package requirements like os, json, numpy, pandas, random, etc. are commonly available in any conda-like distribution. 
 
 ### Generating plots in the publication
 
