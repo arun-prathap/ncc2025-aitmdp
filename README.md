@@ -1,9 +1,8 @@
 # ncc2025-aitmdp
 Simulation Code for National Conference on Communications (NCC) 2025 paper ["On Resource Allocation for Remote Control of MDPs Over Queues Using Age-of-Loop"](https://doi.org/10.1109/NCC63735.2025.10982939)
 
-Update as on 06 Jun 2025 : Made repo public, code for generating plots in publication are uploaded, simulation code partly available, pending for figures 7a and 8 in paper, will be available here by Jun 10, 2025.
-
 ### Code for Analytical and Simulation Results
+The components of the code made publicly available for reproducing results from the paper are explanined below.
 
 #### System Model and associated components
 The basic building blocks used in simulation are available in blocks/.
@@ -34,7 +33,12 @@ The output is dumped as json files in sim/sim\*.json which can be used to genera
 │   ├── fig_4_sim_constrained.py (NO_OF_SIMULATIONS=1000 and NO_OF_STEPS=10000)
 │   ├── fig_4_analytical.py
 │   ├── fig_5a_5b_analytical.py (the code is more or less same as fig_4_analytical.py--can be clubbed)
+│   ├── fig_7a_analytical.py
+│   ├── fig_7a_sim_constrained.py (NO_OF_SIMULATIONS=1000 and NO_OF_STEPS=10000)
+│   ├── fig_7a_sim_relaxed.py (NO_OF_SIMULATIONS=1000 and NO_OF_STEPS=10000)
 │   ├── fig_7b.py
+│   ├── fig_8a.py
+│   ├── fig_8b.py
 ├── sim/
 │   ├── sim*.json (data corresponding to plots in the paper, after executing generate_data.py)
 ```

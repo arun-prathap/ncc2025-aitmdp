@@ -12,14 +12,11 @@ dict_plot1["y_label"] = 'Expected Reward'
 with open('jsons/sim3_data3_085.json') as f:
     DATA1 = json.load(f)
 
-with open('jsons/sim3_data_055_0.45_10000x1000.json') as f:
+with open('jsons/sim3_data_055_10000x1000.json') as f:
     DATA2 = json.load(f)
 
 with open('jsons/sim8_data_055_10000x1000.json') as f:
     DATA3 = json.load(f)
-    
-with open('jsons/sim3_data_055_0.3_10000x1000.json') as f:
-    DATA4 = json.load(f)    
             
 dict_plot1["0"] = {}
 dict_plot1["0"]["data"] = DATA1["rewards"]['0.55']['0.4']['0.45']
@@ -42,7 +39,7 @@ dict_plot1["3"]["str_label_specific"] = '$0.3$, Analytical - Relaxed'
 dict_plot1["3"]["plot_args"] = 'round'
 
 dict_plot1["4"] = {}
-dict_plot1["4"]["data"] = DATA4["mean"]['0.55']['0.4']['0.3']
+dict_plot1["4"]["data"] = DATA2["mean"]['0.55']['0.4']['0.3']
 dict_plot1["4"]["str_label_specific"] = '$\mu_u = 0.3$, Simulation - Relaxed'
 dict_plot1["4"]["plot_args"] = 'square'
 
