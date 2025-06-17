@@ -79,9 +79,9 @@ def simulate_and_write_data_to_folders():
                     mu_mdp = np.round(max(0.0,1-mu_u-mu_d),2)
                     if not os.path.isdir('sim/sim8/'+str(mu_d)+'_'+str(lambda_d)+'_'+str(mu_u)+'_'+str(lambda_u)):
                         os.mkdir('sim/sim8/'+str(mu_d)+'_'+str(lambda_d)+'_'+str(mu_u)+'_'+str(lambda_u))
-                    queue_dict_u = {'queue_max_size':1, 'admission_prob':lambda_u,\
+                    queue_dict_u = {'queue_max_size':NO_OF_STEPS+1, 'admission_prob':lambda_u,\
 		                          'service_prob':1.0, 'fifo':True}
-                    queue_dict_d = {'queue_max_size':1, 'admission_prob':lambda_d,\
+                    queue_dict_d = {'queue_max_size':NO_OF_STEPS+1, 'admission_prob':lambda_d,\
 		                          'service_prob':1.0, 'fifo':True}
                     for i in range(NO_OF_SIMULATIONS):
                         INIT_STATE = np.random.choice(S, p=STATIONARY_STATE_DIST[0])
